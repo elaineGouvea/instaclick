@@ -5,11 +5,11 @@ class User < ActiveRecord::Base
   validates :email, uniqueness: true
 
   def password
-    @password ||= Password.new(password_hash)
+    @password ||= Password.new(hashed_password)
   end
 
   def password=(new_password)
     @password = Password.create(new_password)
-    self.password_hash = @password
+    self.hashed_password = @password
   end
 end
