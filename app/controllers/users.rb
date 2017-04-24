@@ -22,4 +22,4 @@ end
 #   if session[:id] == @found_user.id ||@found_user
 #     erb :'users/show'
 #   end
-end
+# end
