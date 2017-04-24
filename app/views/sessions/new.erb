@@ -1,1 +1,24 @@
-new.erb
+<main>
+  <h1>Login</h1><br><br>
+  <div>
+      <% if @errors %>
+        <% @errors.each do |error| %>
+          <ul>
+            <li><%= error %></li>
+          </ul>
+        <% end %>
+      <% end %>
+  </div>
+  <form id="login_form" method="POST" action="/sessions">
+    <label for="input">Email: </label>
+    <input name="user[email]" type="text" placeholder="Email">
+    <br>
+
+    <label for="input">Password: </label>
+    <input class='user-signup-input' type="password" name="user[password]" placeholder="Password">
+    <br>
+
+    <input type="submit" value="Login" class="button">
+  </form>
+</main>
+

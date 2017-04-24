@@ -18,4 +18,5 @@ class User < ActiveRecord::Base
     if user && user.password == password
       user
     end
+  end
 end

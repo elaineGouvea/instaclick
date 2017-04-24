@@ -2,7 +2,7 @@
   <div class="article-content">
     <p> Name: <%= @found_user.name%> </p>
     <p> Email: <%= @found_user.email%> </p>
-    <br><br>
+
     <form method="post" action="/sessions/:id">
       <input type="hidden" name="_method" value="delete">
       <input type="submit" value="Logout" class="button">
