@@ -9,10 +9,11 @@ post '/users' do
   @user = User.create(params[:user])
 
   if @user.valid?
+    session[:id] = @user.id
     redirect '/'
   else
-    status 422
-    @errors =@users.errors.full_messages
+    status 400
+    @errors = @user.errors.full_messages
     erb :'users/new'
   end
 end
