@@ -16,3 +16,10 @@ post '/users' do
   end
 end
 
+# User details: not needed! I can show users details through sessions.
+# get 'users/:id' do
+#   @found_user = User.find(params[:id])
+#   if session[:id] == @found_user.id ||@found_user
+#     erb :'users/show'
+#   end
+end
