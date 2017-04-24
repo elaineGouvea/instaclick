@@ -1,1 +1,27 @@
-New User page
+<main>
+  <h1>Sign up</h1><br><br>
+  <div>
+      <% if @errors%>
+        <% @errors.each do |error| %>
+          <ul>
+            <li><%= error %></li>
+          </ul>
+        <% end %>
+      <% end %>
+  </div>
+  <form method="post" action="/users/new">
+    <label for="input">User Name: </label>
+    <input name="user[name]" type="text">
+    <br><br>
+
+    <label for="input">Email: </label>
+    <input name="user[email]" type="text">
+    <br><br>
+
+    <label for="input">Password: </label>
+    <input class='user-signup-input' type="password" name="user[password]">
+    <br><br>
+    <input type="submit" value="Sign Up" class="button">
+  </form>
+</main>
+
